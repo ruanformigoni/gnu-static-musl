@@ -17,7 +17,7 @@ jobs:
 
         docker build -t alpine:gnu_static .
 
-        docker run --rm -v $(pwd):/workdir alpine:gnu_static cp /gnu-static/dist/. /workdir/dist/
+        docker run --rm -v $(pwd):/workdir alpine:gnu_static cp -r /gnu-static/dist/. /workdir/dist/
 
     - name: Set permissions for dist directory
       run: |
